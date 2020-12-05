@@ -2,7 +2,8 @@
 class Tabelas{
     inicializa(conexao){
         this.conexao=conexao
-        this.criarTabelaLivros()
+        this.criarTabelaProdutos()
+        this.criarTabelaFuncionarios()
     }
 
     criarTabelaProdutos(){ // metodo é um funcao dentro de uma classe
