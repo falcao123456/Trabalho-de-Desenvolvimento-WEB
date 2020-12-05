@@ -1,17 +1,17 @@
-class ProdutoDao {
+class FuncionarioDao {
     constructor(conexao){
         this._conexao = conexao
     }
 
     lista(){
         return new Promise( (resolver, rejeitar) => {
-            const sql = 'SELECT * FROM produtos'
+            const sql = 'SELECT * FROM funcionarios'
 
             this._conexao.query(
                 sql, 
                 (msgErro, resultados) => {
                     if(msgErro){
-                        return rejeitar('nao foi possivel listar os produtos')
+                        return rejeitar('nao foi possivel listar os funcionarios')
                     } else {
                         return resolver(resultados)
                     }    
@@ -20,15 +20,15 @@ class ProdutoDao {
         });   
     }
 
-    adiciona(produto){
+    adiciona(funcionario){
         return new Promise( (resolver, rejeitar) => {
-            const sql = `INSERT INTO PRODUTOS(nome,laboratorio,preco,descricao) values (?,?,?,?)`
+            const sql = `INSERT INTO Funcionarios(cpf,telefone,nome,cargo, idade) values (?,?,?,?)`
 
-            this._conexao.query(sql,[produto.nome,produto.laboratorio,produto.preco,produto.descricao],
+            this._conexao.query(sql,[funcionario.cpf,funcionario.telefone,funcionario.nome,funcionario.cargo, funcionario.idade],
                 function(msgErro) {
                     if(msgErro){
                         console.log(msgErro)
-                        return rejeitar('nao foi possivel adicionar o produto');
+                        return rejeitar('nao foi possivel adicionar o funcionario');
                     } else {
                         resolver();
                     }
@@ -38,17 +38,17 @@ class ProdutoDao {
     }
 
     remover(id){
-        console.log(`id do produto que quer remover ${id}`)
+        console.log(`id do funcionario que quer remover ${id}`)
 
         return new Promise( (resolver, rejeitar) => {
-            const sql = `DELETE FROM produtos WHERE id=?`
+            const sql = `DELETE FROM funcionarios WHERE id=?`
 
             this._conexao.query(sql,
                 id,
                 function(msgErro) {
                     if(msgErro){
                         console.log(msgErro)
-                        return rejeitar('nao foi possivel remover o produto');
+                        return rejeitar('nao foi possivel remover o funcionario');
                     } else {
                         resolver();
                     }
@@ -59,33 +59,33 @@ class ProdutoDao {
 
     buscaPorId(id){
         return new Promise( (resolver, rejeitar) => {
-            const sql = 'SELECT * FROM produtos WHERE id=?'
+            const sql = 'SELECT * FROM funcionarios WHERE id=?'
            
             this._conexao.query(sql,
                 id,
                 function(msgErro, resultados) {
-                    const produto = resultados[0]
+                    const funcionario = resultados[0]
                     if(msgErro){
                         console.log(msgErro)
-                        return rejeitar('nao foi possivel buscar o produto');
+                        return rejeitar('nao foi possivel buscar o funcionario');
                     } else {
-                        resolver(produto);
+                        resolver(funcionario);
                     }
                 })
 
         })
     }
 
-    altera(produto){
+    altera(funcionario){
         return new Promise( (resolver, rejeitar) => {
-            const id = produto.id;
-            const sql = `UPDATE produtos SET ? WHERE id=?`
+            const id = funcionario.id;
+            const sql = `UPDATE funcionarios SET ? WHERE id=?`
 
-            this._conexao.query(sql,[produto,id],
+            this._conexao.query(sql,[funcionario,id],
                 function(msgErro) {
                     if(msgErro){
                         console.log(msgErro)
-                        return rejeitar('nao foi possivel alterar o produto');
+                        return rejeitar('nao foi possivel alterar o funcionario');
                     } else {
                         return resolver();
                     }
@@ -98,4 +98,4 @@ class ProdutoDao {
 
 } 
 
-module.exports = ProdutoDao
+module.exports = FuncionarioDao

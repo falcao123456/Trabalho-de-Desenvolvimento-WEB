@@ -5,7 +5,7 @@ tabelaProdutos.addEventListener('click', (evento) => {
 
     if(elementoClicado.dataset.type == 'remocao'){
         let produtoId = elementoClicado.dataset.ref;
-        fetch(`http://localhost:3000/livros/${produtoId}`, {method: 'DELETE'})
+        fetch(`http://localhost:3000/produtos/${produtoId}`, {method: 'DELETE'})
             .then( resposta => {
                 //funcao para remover linha da tabela
                 let tr = elementoClicado.closest(`#produto_${produtoId}`)
