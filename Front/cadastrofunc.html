@@ -31,31 +31,36 @@
            
           <form class="container">
             <section class="form-row">
-              <section class="form-group col-md-6">
+              <section class="form-group col-md-6 input">
                 <label for="inputCPF4">CPF</label>
-                <input type="number" class="form-control" id="inputCPF4" placeholder="CPF">
+                <input type="number" class="form-control" id="inputCPF4" placeholder="CPF" required>
+                <span  class="error"></span>
               </section>
 
-              <section class="form-group col-md-6">
+              <section class="form-group col-md-6 input">
                 <label for="inputNome4">Nome</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Nome">
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Nome" required>
+                <span  class="error"></span>
               </section>
             </section>
 
-            <section class="form-group">
+            <section class="form-group input">
               <label for="inputCargo">Cargo</label>
-              <input type="text" class="form-control" id="inputCargo" placeholder="Farmaceutico">
+              <input type="text" class="form-control" id="inputCargo" placeholder="Farmaceutico" required>
+              <span  class="error"></span>
             </section>
 
-            <section class="form-group">
+            <section class="form-group input">
                 <label for="inputIdade">Idade</label>
-                <input type="number" class="form-control" id="inputIdade" placeholder="22">
+                <input type="number" class="form-control" id="inputIdade" placeholder="22" required>
+                <span  class="error"></span>
             </section>
 
             <section class="form-row">
-              <section class="form-group col-md-6">
+              <section class="form-group col-md-6 input">
                 <label for="inputTef">Telefone</label>
-                <input type="number" class="form-control" id="inputTef" placeholder="(071)99999-9999">
+                <input type="number" class="form-control" id="inputTef" placeholder="(071)99999-9999" required>
+                <span  class="error"></span>
             </section>
 
             <button type="submit" class="btn btn-block btn-success">Cadastrar</button>
