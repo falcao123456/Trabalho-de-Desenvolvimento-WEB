@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-  marko_componentType = "/banco_projeto_web$1.0.0/src/app/views/livros/lista/lista.marko",
+  marko_componentType = "/banco_projeto_web$1.0.0/src/app/views/produtos/lista/lista.marko",
   marko_renderer = require("marko/src/runtime/components/renderer"),
   marko_forOf = require("marko/src/runtime/helpers/for-of"),
   helpers_escape_xml = require("marko/src/runtime/html/helpers/escape-xml"),
@@ -16,33 +16,37 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous></head><body><h1>Listagem de Livros</h1><table id=livros class=\"table table-bordered\"><tr><th>ID</th><th>Título</th><th>Autor</th><th>Preco</th><th>Editar</th><th>Remover</th></tr>");
+  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous></head><body><h1>Listagem de Produtos</h1><table id=produtos class=\"table table-bordered\"><tr><th>ID</th><th>Nome</th><th>Laboratorio</th><th>Preco</th><th>Cod</th><th>Descrição</th><th>Quantidade</th><th>Editar</th><th>Remover</th></tr>");
 
   var $for$0 = 0;
 
-  marko_forOf(data.livros, function (item) {
+  marko_forOf(data.produtos, function (item) {
     var $keyScope$0 = "[" + (($for$0++) + "]");
 
     out.w("<tr" +
-      marko_attr("id", "livro_" + (item.id == null ? "" : item.id)) +
+      marko_attr("id", "produto_" + (item.id == null ? "" : item.id)) +
       "><td>" +
       marko_escapeXml(item.id) +
       "</td><td>" +
-      marko_escapeXml(item.titulo) +
+      marko_escapeXml(item.nome) +
       "</td><td>" +
-      marko_escapeXml(item.autor) +
+      marko_escapeXml(item.laboratorio) +
       "</td><td>" +
       marko_escapeXml(item.preco) +
       "</td><td>" +
       marko_escapeXml(item.descricao) +
       "</td><td><a" +
-      marko_attr("href", "/livros/form/" + (item.id == null ? "" : item.id)) +
+      marko_escapeXml(item.numeroProduto) +
+      "</td><td>" +
+      marko_escapeXml(item.quantidade) +
+      "</td><td>" +
+      marko_attr("href", "/produtos/form/" + (item.id == null ? "" : item.id)) +
       " data-type=editar>Editar</a></td><td><a href=#" +
       marko_attr("data-ref", item.id) +
       " data-type=remocao>Remover</a></td><td></td></tr>");
   });
 
-  out.w("</table><script src=./estatico/js/remove-livro.js>\r\n            </script>");
+  out.w("</table><script src=./estatico/js/remove-produto.js>\r\n            </script>");
 
   init_components_tag({}, out);
 
