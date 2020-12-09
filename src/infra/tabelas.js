@@ -8,7 +8,7 @@ class Tabelas{
 
     criarTabelaProdutos(){ // metodo é um funcao dentro de uma classe
 
-        const sql = 'CREATE TABLE IF NOT EXISTS produtos (id int NOT NULL AUTO_INCREMENT, nome varchar(50) NOT NULL, laboratorio varchar(50), preco REAL, descricao text, PRIMARY KEY(id))'
+        const sql = 'CREATE TABLE IF NOT EXISTS produtos (id int NOT NULL AUTO_INCREMENT, nome varchar(50) NOT NULL, laboratorio varchar(50) NOT NULL, preco REAL NOT NULL, descricao text NOT NULL, quantidade int NOT NULL, PRIMARY KEY(id))'
         
         this.conexao.query(sql, msg => {
             if(msg){
@@ -22,7 +22,7 @@ class Tabelas{
 
     criarTabelaFuncionarios(){ // metodo é um funcao dentro de uma classe
 
-        const sql = 'CREATE TABLE IF NOT EXISTS funcionarios (id int NOT NULL AUTO_INCREMENT, cpf int NOT NULL, telefone varchar(50), nome varchar(50) NOT NULL, cargo varchar(20), idade int NOT NULL, PRIMARY KEY(id))'
+        const sql = 'CREATE TABLE IF NOT EXISTS funcionarios (id int NOT NULL AUTO_INCREMENT, cpf int NOT NULL, telefone varchar(50) NOT NULL, nome varchar(50) NOT NULL, cargo varchar(20) NOT NULL, idade int NOT NULL, PRIMARY KEY(id))'
         
         this.conexao.query(sql, msg => {
             if(msg){
