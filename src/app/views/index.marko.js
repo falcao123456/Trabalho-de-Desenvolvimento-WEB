@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-    marko_componentType = "/livraria-paris$1.0.0/src/app/views/index.marko",
+    marko_componentType = "/famacia-dorgasil$1.0.0/src/app/views/index.marko",
     marko_renderer = require("marko/src/runtime/components/renderer"),
     marko_loadTag = require("marko/src/runtime/helpers/load-tag"),
     init_components_tag = marko_loadTag(require("marko/src/core-tags/components/init-components-tag")),
@@ -12,7 +12,7 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=utf-8></head><body><header><h1>Livraria Paris</h1></header><nav><section><a href=/livros>Listar livro</a></section><section><a href=/livros/form>Cadastrar novo livro</a></section></nav> ");
+  out.w("<html><head><meta charset=utf-8></head><body><header><h1>Livraria Paris</h1></header><nav><section><a href=/livros>Listar Livros</a></section><section><a href=/livros/form>Cadastrar novo livro</a></section></nav> ");
 
   init_components_tag({}, out);
 
@@ -29,7 +29,7 @@ marko_template._ = marko_renderer(render, {
   });
 
 marko_template.meta = {
-    id: "/livraria-paris$1.0.0/src/app/views/index.marko",
+    id: "/famacia-dorgasil$1.0.0/src/app/views/index.marko",
     tags: [
       "marko/src/core-tags/components/init-components-tag",
       "marko/src/core-tags/core/await/reorderer-renderer",
