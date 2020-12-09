@@ -22,9 +22,9 @@ class ProdutoDao {
 
     adiciona(produto){
         return new Promise( (resolver, rejeitar) => {
-            const sql = `INSERT INTO PRODUTOS(nome,laboratorio,preco,descricao) values (?,?,?,?)`
+            const sql = `INSERT INTO PRODUTOS(nome,laboratorio,preco,descricao, numeroProduto, quantidade) values (?,?,?,?)`
 
-            this._conexao.query(sql,[produto.nome,produto.laboratorio,produto.preco,produto.descricao],
+            this._conexao.query(sql,[produto.nome,produto.laboratorio,produto.preco,produto.descricao, produto.numeroProduto, produto.quantidade],
                 function(msgErro) {
                     if(msgErro){
                         console.log(msgErro)
