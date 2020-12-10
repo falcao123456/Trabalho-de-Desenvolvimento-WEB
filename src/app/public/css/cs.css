@@ -1,19 +1,12 @@
 header{
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100% !important;
 }
 
-nav {
+/* nav {
     color: white;
-}
-.cora {
-    background-color: gainsboro;
-
-}
-.corb {
-    background-color: whitesmoke;
-}
+} */
 
 .bg23 {
     background-color: brown;
