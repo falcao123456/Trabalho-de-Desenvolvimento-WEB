@@ -34,9 +34,9 @@ function render(input, out, __component, component, state) {
       "</td><td>" +
       marko_escapeXml(item.preco) +
       "</td><td>" +
-      marko_escapeXml(item.descricao) +
-      "</td><td><a" +
       marko_escapeXml(item.numeroProduto) +
+      "</td><td><a" +
+      marko_escapeXml(item.descricao) +
       "</td><td>" +
       marko_escapeXml(item.quantidade) +
       "</td><td>" +
@@ -63,7 +63,7 @@ marko_template._ = marko_renderer(render, {
 });
 
 marko_template.meta = {
-  id: "/banco_projeto_web$1.0.0/src/app/views/livros/lista/lista.marko",
+  id: "/banco_projeto_web$1.0.0/src/app/views/produtos/lista/lista.marko",
   tags: [
     "marko/src/core-tags/components/init-components-tag",
     "marko/src/core-tags/core/await/reorderer-renderer",
