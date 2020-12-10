@@ -29,8 +29,10 @@ function render(input, out, __component, component, state) {
     marko_attr("value", data.funcionario.cargo) +
     " placeholder=\"Ex.: Analista Sênior\"></section><section><label for=cpf>CPF:</label><input type=number id=cpf name=cpf" +
     marko_attr("value", data.funcionario.cpf) +
-    "placeholder=\"Ex.: Analista Sênior\"></section><section><label for=cpf>CPF:</label><input type=number id=cpf name=cpf" +
-
+    "placeholder=\"Ex.: Analista Sênior\"></section><section><label for=telefone>Telefone:</label><input type=text id=telefone name=telefone" +
+    marko_attr("value", data.funcionario.telefone) +
+    "placeholder=\"Ex.: (xx) xxxxx-xxxx\"></section><section><label for=idade>Idade:</label><input type=number id=idade name=idade" +
+    marko_attr("value", data.funcionario.idade) +
 
 
 
