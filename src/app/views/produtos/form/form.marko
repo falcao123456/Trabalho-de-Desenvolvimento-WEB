@@ -59,11 +59,13 @@
             </section>
             <section>
                 <label for="numerodoproduto">numerodoproduto:</label>
-                <input type="numerodoproduto" id="numerodoproduto" name="numerodoproduto" value="${data.produto.numerodoproduto}"  placeholder="digite o nome do numerodoproduto"/>
+                <input type="number" id="numerodoproduto" name="numerodoproduto" placeholder="Ex.: 16"/>
+                <span class="error"></span>
             </section>
             <section>
                 <label for="descricao">Descricao:</label>
-                <textarea cols="20" rows="10" id="descricao" name="descricao" placeholder="digite a descricao do livro"> ${data.livro.descricao} </textarea>
+                <textarea cols="20" rows="10" id="descricao" name="descricao" placeholder="digite a descricao do produto"> ${data.livro.descricao} </textarea>
+                <span class="error"></span>
             </section>
             <section>
                 <label for="quantidade">Quantidade</label>

@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-  marko_componentType = "/banco_projeto_web$1.0.0/src/app/views/livros/form/form.marko",
+  marko_componentType = "/banco_projeto_web$1.0.0/src/app/views/funcionarios/form/form.marko",
   marko_renderer = require("marko/src/runtime/components/renderer"),
   marko_attr = require("marko/src/runtime/html/helpers/attr"),
   helpers_escape_xml = require("marko/src/runtime/html/helpers/escape-xml"),
@@ -23,15 +23,13 @@ function render(input, out, __component, component, state) {
 
   out.w("<input type=hidden id=id name=id" +
     marko_attr("value", data.funcionario.id) +
-    "><section><label for=titulo>Titulo:</label><input type=text id=titulo name=titulo" +
-    marko_attr("value", data.produto.nomedoproduto) +
-    " placeholder=\"digite o nome do produto\"></section><section><label for=autor>Autor:</label><input type=text id=autor name=autor" +
-    marko_attr("value", data.produto.laboratorio) +
-    " placeholder=\"digite o nome do laboratorio\"></section><section><label for=preco>Preço:</label><input type=number id=preco name=preco" +
-    marko_attr("value", data.produto.tipo) +
-    " placeholder=\"digite a data validade do produto\"></section><section><label for=descricao>Descricao:</label><textarea cols=20 rows=10 id=descricao name=descricao placeholder=\"digite a descricao do livro\"> " +
-    marko_escapeXml(data.produto.Validade) +
-
+    "><section><label for=nome>Nome:</label><input type=text id=nome name=nome" +
+    marko_attr("value", data.funcionario.nome) +
+    " placeholder=\"Ex.: Galdir Reges\"></section><section><label for=cargo>Cargo:</label><input type=text id=cargo name=cargo" +
+    marko_attr("value", data.funcionario.cargo) +
+    " placeholder=\"Ex.: Analista Sênior\"></section><section><label for=cpf>CPF:</label><input type=number id=cpf name=cpf" +
+    marko_attr("value", data.funcionario.cpf) +
+    "placeholder=\"Ex.: Analista Sênior\"></section><section><label for=cpf>CPF:</label><input type=number id=cpf name=cpf" +
 
 
 

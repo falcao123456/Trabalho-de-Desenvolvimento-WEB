@@ -36,38 +36,30 @@
             </section>
             </if>
 
-            <input type="hidden" id="id" name="id" value="${data.produto.id}" />
+            <input type="hidden" id="id" name="id" value="${data.funcionario.id}" />
             <section>
                 <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Nome do Medicamento" required name="nome">
+                    <input type="text" class="form-control" id="nome" placeholder="Ex.: Galdir Reges" required name="nome">
                     <span  class="error"></span>
             </section>
             <section>
-                <label for="laboratorio">Laboratorio</label>
-                <input type="text" class="form-control" id="laboratorio" name="laboratorio" placeholder="Laboratorio do Medicamento" required>
+                <label for="cargo">Laboratorio</label>
+                <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Ex.: Analista Sênior" required>
                 <span  class="error"></span>
             </section>
             <section>
-                <label for="preco">Preço</label>
-                <input type="number" class="form-control" id="preco" name="preco" placeholder="9,99" required>
+                <label for="cpf">CPF</label>
+                <input type="number" class="form-control" id="cpf" name="cpf" placeholder="123.456.789-62" required>
                 <span class="error"></span>
             </section>
             <section>
-                <label for="descricao">Descrição</label>
-                <textarea type="text" class="form-control" id="descricao" name="descricao" rows="3" placeholder="Descrição" required></textarea>
+                <label for="telefone">Telefone</label>
+                <input type="text" class="form-control" id="telefone" name="telefone" rows="3" placeholder="(xx)xxxxx-xxxx" required>
                 <span class="error"></span>
             </section>
             <section>
-                <label for="numerodoproduto">numerodoproduto:</label>
-                <input type="numerodoproduto" id="numerodoproduto" name="numerodoproduto" value="${data.produto.numerodoproduto}"  placeholder="digite o nome do numerodoproduto"/>
-            </section>
-            <section>
-                <label for="descricao">Descricao:</label>
-                <textarea cols="20" rows="10" id="descricao" name="descricao" placeholder="digite a descricao do livro"> ${data.livro.descricao} </textarea>
-            </section>
-            <section>
-                <label for="quantidade">Quantidade</label>
-                <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Exemplo: 2" required>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade"  placeholder="27" required/>
                 <span class="error"></span>
             </section>
             <button type="submit" class="btn btn-block btn-success">Cadastrar</button>
