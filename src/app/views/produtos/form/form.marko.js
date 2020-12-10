@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-  marko_componentType = "/banco_projeto_web$1.0.0/src/app/views/livros/form/form.marko",
+  marko_componentType = "/banco_projeto_web$1.0.0/src/app/views/produtos/form/form.marko",
   marko_renderer = require("marko/src/runtime/components/renderer"),
   marko_attr = require("marko/src/runtime/html/helpers/attr"),
   helpers_escape_xml = require("marko/src/runtime/html/helpers/escape-xml"),
@@ -15,9 +15,9 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><body><h1>Cadastro de livros</h1><form action=/livros method=post>");
+  out.w("<html><body><h1>Cadastro de Produtos</h1><form action=/produtos method=post>");
 
-  if (data.livro.id) {
+  if (data.produto.id) {
     out.w("<section><input type=hidden name=_method value=put></section>");
   }
 
@@ -29,7 +29,7 @@ function render(input, out, __component, component, state) {
     marko_attr("value", data.produto.laboratorio) +
     " placeholder=\"digite o nome do laboratorio\"></section><section><label for=preco>Preço:</label><input type=number id=preco name=preco" +
     marko_attr("value", data.produto.tipo) +
-    " placeholder=\"digite a data validade do produto\"></section><section><label for=descricao>Descricao:</label><textarea cols=20 rows=10 id=descricao name=descricao placeholder=\"digite a descricao do livro\"> " +
+    " placeholder=\"digite a data validade do produto\"></section><section><label for=descricao>Descricao:</label><textarea cols=20 rows=10 id=descricao name=descricao placeholder=\"digite a descricao do produto\"> " +
     marko_escapeXml(data.produto.Validade) +
 
 
@@ -54,7 +54,7 @@ marko_template._ = marko_renderer(render, {
 });
 
 marko_template.meta = {
-  id: "/banco_projeto_web$1.0.0/src/app/views/livros/form/form.marko",
+  id: "/banco_projeto_web$1.0.0/src/app/views/produtos/form/form.marko",
   tags: [
     "marko/src/core-tags/components/init-components-tag",
     "marko/src/core-tags/core/await/reorderer-renderer",
