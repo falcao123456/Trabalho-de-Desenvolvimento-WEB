@@ -3,6 +3,10 @@ header{
     top: 0;
     width: 100%;
 }
+
+nav {
+    color: white;
+}
 .cora {
     background-color: gainsboro;
 
