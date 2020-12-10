@@ -1,5 +1,7 @@
 header{
-    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .cora {
     background-color: gainsboro;
