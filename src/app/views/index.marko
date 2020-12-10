@@ -12,20 +12,40 @@
   </head>
   <body background="./estatico/images/BG.jpeg" bgproperties="fixed">
      <header class="row cornav">
-        <nav class="col-md-2 cora pb-md-5 border border-dark shadow-lg p-3 mb-5 bg-white rounded-bottom">
-          
-          <img class="media mx-auto d-block img-fluid " src="./estatico/images/LOGO.png" alt="Logo Imagem" style="width:200px;height:90px;">
-         <ul class="row nav-pills nav-fill ">
-          <a class="nav-link text-dark" href="/produtos">Produtos</a>
-          <a class="nav-link text-dark" href="/funcionarios">Funcionarios</a>
-          <a class="nav-link text-dark" href="/produtos/form">Cadastro de Produto</a>
-          <a class="nav-link text-dark" href="/funcionarios/form">Cadastro de Funcionarios</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Farmacia Dorgasil</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Funcionarios
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/funcionarios/form">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="/funcionarios">Listar</a></li>
           </ul>
-        </nav>
-        <section class="row align-items-center corse" style="margin-left: 100px; padding:15%">
-          
-        </section>
-        
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Produtos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/produtos/form">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="/produtos">Listar action</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
       </header>
     
       
